@@ -7,15 +7,7 @@ const bcrypt = require("bcrypt");
 
 
 module.exports = async (req, res,next) => {
-    const username = req.body.username
-    console.log(username);
-    let usern = await User.findOne({username:username})
-    if(usern){
-        //重定向回用户编辑页面 并传递message参数
-        res.render('admin/user-edit',{
-            umessage:'用户已存在'
-        })
-    }
+    
     //定义对象验证规则
 
     try{
