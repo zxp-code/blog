@@ -1,0 +1,11 @@
+{{extend "./common/layout.html"}}
+{{block "main"}}
+<p class="bg-danger text-center">{{msg}}</p>
+{{/block}}
+{{block "js"}}
+<script>
+    setTimeout(()=>{
+        location.href="/admin/login"
+    },2000)
+</script>
+{{/block}}
